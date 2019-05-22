@@ -12,7 +12,7 @@
 namespace sc{
 
 
-	template < typename T, size_t SIZE>
+	template < typename T>
 	class vector{
 
 		public:
@@ -134,10 +134,25 @@ namespace sc{
 
 
 			//=====>construtores:
+			vector()
+			{/*empty */
+			std::cout << "contruiu 1\n";
+		}
+
+			~vector()
+			{/* empty*/	std::cout << "destruiu 1\n";
+		}
+
+			vector( std::initializer_list<T> ilist )
+			{
+				//data = new T[ count];
+				std::cout << "to aqui 1\n";
+			}
 
 			vector( size_t count )
 			{
 				data = new T[ count];
+				std::cout << "to aqui 1\n";
 			}
 
 		private:
