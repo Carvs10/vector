@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+//aula de matheus
 template << typename
 
 class sala{
@@ -33,3 +34,10 @@ int main(){
 int sala::pegarnumpessoas(){
 	AFAFASFAFASFA
 }
+
+
+//projeto preferencias
+using size_type = unsigned long
+
+//oparators
+//metodos
