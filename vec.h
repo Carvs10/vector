@@ -15,6 +15,8 @@ namespace sc{
 	template < typename T>
 	class vector{
 
+		
+
 		public:
 
 			
@@ -25,7 +27,7 @@ namespace sc{
 					typedef size_t size_type;
 					typedef T* pointer;
 					typedef std::ptrdiff_t difference_type;
-					//typedef std::bidirectinonal_iterator_tag iterator_category;
+					typedef std::bidirectinonal_iterator_tag iterator_category;
 
 				//== Private data	
 				private:
@@ -106,22 +108,36 @@ namespace sc{
 					bool operator!=( const iterator &it) const
 					{ return this->ptr != it.ptr;}
 
-					//difference_type operator-( const )
+					
 				
 
 		};
 			//class const_iterator{
 			//};
 
+			using size_type = unsigned long;
+			using value_type = T;
+			using pointer = value_type*;
+			using reference = value_type&;
+			using const_reference = const value_type&;
+			using iterator = MyIterator < T >;
+			using const_iterator = MyIterator < const T >
+	
+			
+			
+
 			///==> Special Members
-			///Constructor:
-			vector()
-			{/*empty */
-			std::cout << "contruiu 1\n";}
+			///Constructor: build a new vector.
+			vector( size_t count = 0 ) :
+				data= new T[ 2*count ];
+				size = count;
+				capacity = 2*count;
+			{/* Initialize the vector with null values */}
 
 			///Destructor:
-			~vector()
-			{/* empty*/	std::cout << "destruiu 1\n";}
+			~vector():
+				delete [] data;
+			{/* Desturct the data in the vector*/	std::cout << "destruiu 1\n";}
 
 			vector( std::initializer_list<T> ilist )
 			{
@@ -129,16 +145,15 @@ namespace sc{
 				std::cout << "to aqui 1\n";
 			}
 
-			vector( size_t count )
+			explicit vector( size_type count ):
+				size{ count },
+				capacity{ count }
 			{
 				data = new T[ count ];
 				std::cout << "to aqui 1\n";
 			}
 
-			/*explicit vector( size_type count)
-			{}
-
-			template < typename InpultIt >
+			/*template < typename InpultIt >
 			vector ( InpultIt first, InputIt last)
 			{}
 
@@ -150,7 +165,7 @@ namespace sc{
 
 			vector& operator=( std::initializer_list<T> ilist )
 			{}
-
+			///===
 			size_type size() const
 			{}
 
@@ -177,6 +192,27 @@ namespace sc{
 
 			const T & front() const
 			{}
+
+			void assign ( size_type count, const T & value )
+			{}
+
+			T & operator[] ( size_type pos );
+
+			T & at ( size_type pos );
+
+			size_type capacity() const;
+
+			void reserve ( size_type new_cap);
+
+			capacity();
+
+			shrink_to_fit();
+
+			bool operator==( const vector& lhs, const vector& rhs);
+
+			bool operator!=( const vector& lhs, const vector& rhs);
+
+
 
 		*/
 		private:
