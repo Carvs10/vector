@@ -4,15 +4,15 @@
 #include <iostream>
 #include <cstdlib> //size_t
 #include <string>
-#include<exception>
-#include<algorithm>
+#include <exception>
+#include <algorithm>
 #include <initializer_list>
 
 
 namespace sc{
 
 
-	template < typename T>
+	template < typename T >
 	class vector{
 
 		
@@ -24,10 +24,10 @@ namespace sc{
 			{
 				public:
 					typedef T& reference;
-					typedef size_t size_type;
+					typedef std::size_t size_type;
 					typedef T* pointer;
 					typedef std::ptrdiff_t difference_type;
-					typedef std::bidirectinonal_iterator_tag iterator_category;
+					//typedef std::bidirectinonal_iterator_tag iterator_category;
 
 				//== Private data	
 				private:
@@ -120,24 +120,32 @@ namespace sc{
 			using pointer = value_type*;
 			using reference = value_type&;
 			using const_reference = const value_type&;
-			using iterator = MyIterator < T >;
-			using const_iterator = MyIterator < const T >
+			//using iterator = iterator < T >;             //using iterator = MyIterator < T >;
+			//using const_iterator = iterator < const T >  //using const_iterator = MyIterator < const T >
 	
-			
+		private:
+			T * data;
+			std::size_t size; //!< número de elemnetos no vector
+			std::size_t capacity; //!< Capacidade máxima (atual) do vector
+
+		public:
 			
 
 			///==> Special Members
 			///Constructor: build a new vector.
-			vector( size_t count = 0 ) :
-				data= new T[ 2*count ];
-				size = count;
-				capacity = 2*count;
-			{/* Initialize the vector with null values */}
+			vector( ) :
+				data { new T[ 0 ] },
+				size { 0 },
+				capacity { 0 }
+
+			{/* Initialize the vector with null values */std::cout << "contruu 1\n";}
 
 			///Destructor:
-			~vector():
-				delete [] data;
-			{/* Desturct the data in the vector*/	std::cout << "destruiu 1\n";}
+			~vector()
+				//delete [] data;
+			{/* Desturct the data in the vector*/
+			delete [] data;	std::cout << "destruiu 1\n";
+			}
 
 			vector( std::initializer_list<T> ilist )
 			{
@@ -215,10 +223,7 @@ namespace sc{
 
 
 		*/
-		private:
-			T * data;
-			size_t size; //!< número de elemnetos no vector
-			size_t capacity; //!< Capacidade máxima (atual) do vector
+		
 	};
 }
 

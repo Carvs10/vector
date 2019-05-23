@@ -3,9 +3,11 @@
 
 int main(){
 
+	std::cout << "começo\n";
+
 	sc::vector<int> v;
 
-	std::cout << "eu e vc \n";
+	std::cout << "main \n";
 
 	return 0;
 }
