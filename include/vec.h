@@ -343,11 +343,6 @@ namespace sc{
 					return data[ pos ];
 				}
 			}
-
-			
-
-			
-
 			
 
 			void shrink_to_fit()//iguala a capacidade ao tamanho!

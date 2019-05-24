@@ -3,7 +3,7 @@
 #include <functional>           // std::function
 #include <algorithm> 
 #include <vector>
-#include "vec.h"
+#include "../include/vec.h"
 
 int main(){
 
