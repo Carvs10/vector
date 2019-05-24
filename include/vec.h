@@ -47,7 +47,7 @@ namespace sc{
 					typedef std::ptrdiff_t difference_type;
 					//typedef std::bidirectinonal_iterator_tag iterator_category;
 
-				//== Private data	
+				//! Private data	
 				private:
 					T *ptr; /**<Pointer to data. */
 
@@ -149,11 +149,10 @@ namespace sc{
 		public:
 			
 
-			/**
-			 * Special Members
+			//! Special Members
+			 /* 
 			 * 
-			 * 
-			 *Constructor: build a new vector.//1
+			 /*!Constructor: build a new vector.//1
 			 */
 			vector( ) :
 				data { new T[ 0] },
@@ -162,8 +161,8 @@ namespace sc{
 
 			{/* Initialize the vector with null values */std::cout << "contruu 1\n";}
 
-			/**
-			 * Destructor: delete the vector exiting
+			//!
+			 /*! Destructor: delete the vector exiting
 			 */
 			~vector()
 				//delete [] data;
@@ -171,8 +170,8 @@ namespace sc{
 			delete [] data;	std::cout << "destruiu 1\n";
 			}
 
-			/**
-			 * Construc the vector with selectec elements//4
+			//!
+			 /*! Construc the vector with selectec elements//4
 			 */
 			vector( std::initializer_list<T> ilist ):
 				SIZE{ ilist.size() },
@@ -190,8 +189,8 @@ namespace sc{
 				std::cout << "construiu 4\n";
 			}
 			
-			/**
-			 * Constructs the list with count default-inserted instances of T .
+			//!
+			 /*! Constructs the list with count default-inserted instances of T .
 			 */
 			explicit vector( size_type count )://2
 				SIZE{ 0 },
@@ -201,8 +200,8 @@ namespace sc{
 				std::cout << "construiu 2\n";
 			}
 
-			/**
-			 * Constructs the list with the contents of the range [first, last).
+			//!
+			 /*! Constructs the list with the contents of the range [first, last).
 			 */
 			template < typename InpultIt >
 			vector ( InpultIt first, InpultIt last)://pego o range e faço um casting do last - first para pegar o size
@@ -223,9 +222,9 @@ namespace sc{
 				std::cout << "construiu 3\n";
 			}
 
-			/**
-			 * Copy constructor. 
-			 * Constructs the list with the deep copy of the contents of other.
+			//!
+			 /*! Copy constructor. 
+			 /*! Constructs the list with the deep copy of the contents of other.
 			 */
 			vector( const vector& other)://copia o conteudo de um vector para outro
 				SIZE{ other.SIZE },
@@ -237,9 +236,9 @@ namespace sc{
 				std::copy( &other.data[0], &other.data[SIZE], data );
 
 			}
-			/**
-			 * Copy assignment operator.
-			 * Replaces the contents with a copy of the contents of other.
+			//!
+			 /*! Copy assignment operator.
+			 /*! Replaces the contents with a copy of the contents of other.
 			 */
 			vector& operator=( const vector& other)//===> PRECISO ENTENDER AINDA!!! AINDA NAO ESTA FUNCCIONANDO
 				//size{ other.size },
@@ -255,8 +254,8 @@ namespace sc{
 				return *this;	
 			}
 
-			/**
-			 * Replaces the contents with those identified by initializer list ilist
+			//!
+			 /*! Replaces the contents with those identified by initializer list ilist
 			 */
 			vector& operator=( std::initializer_list<T> ilist )//===> PRECISO ENTENDER AINDA!!! AINDA NAO ESTA FUNCCIONANDO
 			{
@@ -268,21 +267,20 @@ namespace sc{
 			}
 
 
-			/**
-			 * Capacity methods:
-			 */
+			//!Capacity methods:
+
 			
 
-			/**
-			 * Return the number of elements in the container
+			//!
+			 /*! Return the number of elements in the container
 			 */
 			size_type size() const
 			{
 				return SIZE;//(size_type)(size);
 			}
 
-			/**
-			 * Returns true if the container contains no elements, and false otherwise
+			//!
+			 /*! Returns true if the container contains no elements, and false otherwise
 			 */
 			bool empty()
 			{
@@ -294,21 +292,18 @@ namespace sc{
 				}
 			}
 
-			/**
-			 * Return the internal storage capacity of the array
+			//!
+			 /*! Return the internal storage capacity of the array
 			 */
 			size_type capacity() const
 			{
 				return CAPACITY;
 			}
 
-			/**
-			 * Modifiers methods:
-			 */
-
+			//! Modifiers methods:
 			
-			/**
-			 * Remove (either logically or physically) all elements from the container
+			//!
+			 /*! Remove (either logically or physically) all elements from the container
 			 */
 			void clear()
 			{	
@@ -316,8 +311,8 @@ namespace sc{
 				SIZE = 0 ;
 			}
 			
-			/**
-			 * Adds value to the end of the list
+			//!
+			 /*! Adds value to the end of the list
 			 */
 			void push_back( const T & value )
 			{
@@ -332,8 +327,8 @@ namespace sc{
            		 data[SIZE++] = value;
             	//*begin() = value;
 			}
-			/**
-			 * Adds value to the front of the list
+			//!
+			 /*! Adds value to the front of the list
 			 */
 			void push_front( const T & value )
 			{
@@ -357,16 +352,16 @@ namespace sc{
             	//*begin() = value;
 			}
 
-			/**
-			 * Removes the object at the end of the list.
+			//!
+			 /*! Removes the object at the end of the list.
 			 */
 			void pop_back()
 			{
 				SIZE--;
 			}
 
-			/**
-			 * Removes the object at the front of the list.
+			//!
+			 /*! Removes the object at the front of the list.
 			 */
 			void pop_front()
 			{
@@ -379,24 +374,24 @@ namespace sc{
 			}
 
 			
-			/**
-			 * Returns the object at the end of the list
+			//!
+			 /*! Returns the object at the end of the list
 			 */
 			const T & back() const//retorna o objeto do final da lista
 			{
 				return data[SIZE];
 			}
 
-			/**
-			 * Returns the object at the front of the list
+			//!
+			 /*! Returns the object at the front of the list
 			 */
 			const T & front() const//retorna o objeto do inicio da lista
 			{
 				return data[0];
 			}
 			
-			/**
-			 * eplaces the content of the list with count copies of value.
+			//!
+			 /*! eplaces the content of the list with count copies of value.
 			 */
 			void assign ( size_type count, const T & value )//coloca o valor em todos os elementos do vetor antigo  de forma contada //testar
 			{
@@ -407,16 +402,16 @@ namespace sc{
 				}
 			}
 			
-			/**
-			 * Returns the object at the index pos in the array,with no bounds-checking
+			//!
+			 /*! Returns the object at the index pos in the array,with no bounds-checking
 			 */
 			T & operator[] ( size_type pos )//libera a operação de incerção por barras
 			{
 				return data[ pos ];
 			}
 
-			/**
-			 * Returns the object at the index pos in the array,with bounds-checking
+			//!
+			 /*! Returns the object at the index pos in the array,with bounds-checking
 			 */
 			T & at ( size_type pos )//retorna o objeto dentro do index dado caso o index seja valido// testar
 			{
@@ -428,17 +423,17 @@ namespace sc{
 				}
 			}
 			
-			/**
-			 * Requests the removal of unused capacity.
-			 * It is a non-binding request to reduce capacity() to size().
+			//!
+			 /*! Requests the removal of unused capacity.
+			 /*! It is a non-binding request to reduce capacity() to size().
 			 */
 			void shrink_to_fit()//iguala a capacidade ao tamanho!
 			{
 				CAPACITY = SIZE;
 			}
 			
-			/**
-			 * Return false if the arrays have different elements
+			//!
+			 /*! Return false if the arrays have different elements
 			 */
 			friend bool operator== ( const vector& lhs, const vector& rhs)//nao ta funcionando direito
 			{
@@ -456,8 +451,8 @@ namespace sc{
 				}
 			}
 			
-			/**
-			 * Return false if the arrays are equal.
+			//!
+			 /*! Return false if the arrays are equal.
 			 */
 			friend bool operator!= ( const vector& lhs, const vector& rhs)//não ta funcionando direito
 			{
@@ -476,12 +471,11 @@ namespace sc{
 			}
 		private:
 
-			/**
-			 * Private Data from Vector
-			 */
+			//!Private Data from Vector
+		
 
-			/** 
-			 * Changes capacity to 'new_cap'.
+			//! 
+			 /*! Changes capacity to 'new_cap'.
 			 */
         	void reserve( size_t new_cap )
         	{
