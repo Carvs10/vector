@@ -23,10 +23,20 @@ int main(){
 
     sc::vector<int> vec3(vec1);//5
 
+    //sc::vector<int> vec4;//6
+
+    // b = vec;
+
+    std::cout << vec1.size()<<std::endl;
+
+    std::cout << a.empty()<<std::endl;
+
+    std::cout << vec1.capacity()<<std::endl;
+
 	std::cout << "main \n";
 
 	for(int i= 0;i<5; i++){
-		std::cout << vec2[i]<<std::endl;
+		std::cout << b[i]<<std::endl;
 	}
 
 	return 0;

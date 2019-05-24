@@ -125,8 +125,8 @@ namespace sc{
 	
 		private:
 			T * data;
-			std::size_t size; //!< número de elemnetos no vector
-			std::size_t capacity; //!< Capacidade máxima (atual) do vector
+			std::size_t SIZE; //!< número de elemnetos no vector
+			std::size_t CAPACITY; //!< Capacidade máxima (atual) do vector
 
 		public:
 			
@@ -135,8 +135,8 @@ namespace sc{
 			///Constructor: build a new vector.//1
 			vector( ) :
 				data { new T[ 0] },
-				size { 0},
-				capacity { 0 }
+				SIZE { 0},
+				CAPACITY { 0 }
 
 			{/* Initialize the vector with null values */std::cout << "contruu 1\n";}
 
@@ -149,10 +149,10 @@ namespace sc{
 
 			//construindo o vetor com elementos ja escolhidos//4
 			vector( std::initializer_list<T> ilist ):
-				size{ ilist.size() },
-				capacity{ ilist.size() }
+				SIZE{ ilist.size() },
+				CAPACITY{ ilist.size() }
 			{
-				data = new T[ capacity ];
+				data = new T[ CAPACITY ];
 				int i;
 				for( const T& e : ilist){
 
@@ -165,8 +165,8 @@ namespace sc{
 			}
 
 			explicit vector( size_type count )://2
-				size{ 0 },
-				capacity{ count }
+				SIZE{ 0 },
+				CAPACITY{ count }
 			{
 				data = new T[ count ];
 				std::cout << "construiu 2\n";
@@ -174,12 +174,12 @@ namespace sc{
 
 			template < typename InpultIt >
 			vector ( InpultIt first, InpultIt last)://pego o range e faço um casting do last - first para pegar o size
-			size{ (size_type)(last - first) },
-			capacity{ (size_type)(last - first) }
+			SIZE{ (size_type)(last - first) },
+			CAPACITY{ (size_type)(last - first) }
 			{
-				data = new T[ capacity ];
+				data = new T[ CAPACITY ];
 
-				for(int i = 0; i < size; i++){
+				for(int i = 0; i < SIZE; i++){
 					data[i] = *first ;
 					//std::cout << first;
 					first++;
@@ -192,30 +192,66 @@ namespace sc{
 			}
 
 			vector( const vector& other)://copia o conteudo de um vector para outro
-				size{ other.size },
-				capacity{ other.capacity }
+				SIZE{ other.SIZE },
+				CAPACITY{ other.CAPACITY }
 			{	
 				std::cout << "construiu 5\n";
-				data = new T[ capacity ];
+				data = new T[ CAPACITY ];
 
-				std::copy( &other.data[0], &other.data[size], data );
+				std::copy( &other.data[0], &other.data[SIZE], data );
 
 			}
 			
-			/*vector& operator=( const vector& other)
-			{}
+			vector& operator=( const vector& other)//===================> PRECISO ENTENDER AINDA!!! AINDA NAO ESTA FUNCCIONANDO
+				//size{ other.size },
+				//capacity{ other.CAPACITY }
+			{
+				//Determinar o menor tamanho
+				//auto limit = std::min(other.size, size );
+				//copiar os dados de rhs para o 
+				data = new T[ other.SIZE ];
+				std::cout << "construiu 6\n";
+				std::copy( data, other.SIZE, other.data);
 
-			vector& operator=( std::initializer_list<T> ilist )
-			{}
-			///===
+				return *this;	
+			}
+
+			vector& operator=( std::initializer_list<T> ilist )//===================> PRECISO ENTENDER AINDA!!! AINDA NAO ESTA FUNCCIONANDO
+			{
+				data = new T[ ilist.SIZE ];
+				std::cout << "construiu 6\n";
+				std::copy( data, ilist.SIZE, ilist.data);
+
+				return *this;
+			}
+
+
+			//=============>Capacity methods
+			
 			size_type size() const
-			{}
+			{
+				return SIZE;//(size_type)(size);
+			}
 
+			bool empty()
+			{
+				if(SIZE == 0){
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
+
+			size_type capacity() const
+			{
+				return CAPACITY;
+			}
+			/*
 			void clear()
 			{}
 
-			bool empty()
-			{}
+			
 
 			void push_front( const T & value )
 			{}
@@ -245,7 +281,7 @@ namespace sc{
 
 			/*T & at ( size_type pos );
 
-			size_type capacity() const;
+			
 
 			void reserve ( size_type new_cap);
 
