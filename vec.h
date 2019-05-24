@@ -5,7 +5,7 @@
 #include <cstdlib> //size_t
 #include <string>
 #include <exception>
-#include <algorithm>
+#include <algorithm>//std::copy
 #include <initializer_list>
 
 
@@ -132,7 +132,7 @@ namespace sc{
 			
 
 			///==> Special Members
-			///Constructor: build a new vector.
+			///Constructor: build a new vector.//1
 			vector( ) :
 				data { new T[ 0] },
 				size { 0},
@@ -147,10 +147,12 @@ namespace sc{
 			delete [] data;	std::cout << "destruiu 1\n";
 			}
 
-			//construindo o vetor com elementos ja escolhidos
-			vector( std::initializer_list<T> ilist )
+			//construindo o vetor com elementos ja escolhidos//4
+			vector( std::initializer_list<T> ilist ):
+				size{ ilist.size() },
+				capacity{ ilist.size() }
 			{
-				data = new T[ ilist.size()];
+				data = new T[ capacity ];
 				int i;
 				for( const T& e : ilist){
 
@@ -162,8 +164,8 @@ namespace sc{
 				std::cout << "construiu 4\n";
 			}
 
-			explicit vector( size_type count ):
-				size{ count },
+			explicit vector( size_type count )://2
+				size{ 0 },
 				capacity{ count }
 			{
 				data = new T[ count ];
@@ -171,19 +173,33 @@ namespace sc{
 			}
 
 			template < typename InpultIt >
-			vector ( InpultIt first, InpultIt last)
+			vector ( InpultIt first, InpultIt last)://pego o range e faço um casting do last - first para pegar o size
+			size{ (size_type)(last - first) },
+			capacity{ (size_type)(last - first) }
 			{
-				data = new T[ last - first ];
+				data = new T[ capacity ];
+
+				for(int i = 0; i < size; i++){
+					data[i] = *first ;
+					//std::cout << first;
+					first++;
+				}
 				//while(first < last){
+				//	data[]
 					//first++;
 				//}
 				std::cout << "construiu 3\n";
 			}
 
-			vector( const vector& other)
+			vector( const vector& other)://copia o conteudo de um vector para outro
+				size{ other.size },
+				capacity{ other.capacity }
 			{	
 				std::cout << "construiu 5\n";
-				data = new T[ other.capacity ];
+				data = new T[ capacity ];
+
+				std::copy( &other.data[0], &other.data[size], data );
+
 			}
 			
 			/*vector& operator=( const vector& other)
@@ -220,11 +236,14 @@ namespace sc{
 			{}
 
 			void assign ( size_type count, const T & value )
-			{}
+			{}*/
+			
+			T & operator[] ( size_type pos )
+			{
+				return data[ pos ];
+			}
 
-			T & operator[] ( size_type pos );
-
-			T & at ( size_type pos );
+			/*T & at ( size_type pos );
 
 			size_type capacity() const;
 
