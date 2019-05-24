@@ -38,6 +38,8 @@ int main(){
     vec1.push_front(5);
     //b.push_back(5);
 
+    vec1.pop_front();
+
 	std::cout << "main \n";
 
 	for(int i= 0;i<6; i++){

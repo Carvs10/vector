@@ -279,9 +279,8 @@ namespace sc{
                 	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );//FALTA ENTENDER ESSA LINHA DE CODIGO
             	}
             	SIZE++;
-            	// Inserir normalmente.
             	//transferir um bloco de memoria para o lado
-            	//int l = 0;
+
             	for(int i = SIZE; i > 0; i--){
 
             		data[i] = data[i-1];
@@ -293,13 +292,22 @@ namespace sc{
             	//*begin() = value;
 			}
 	
-			
-			/*
-			void pop_front()
-			{}
-
 			void pop_back()
-			{}
+			{
+				SIZE--;
+			}
+			
+			void pop_front()
+			{
+				SIZE--;
+				
+				for(int i = 0; i < SIZE; i++){
+
+            		data[i] = data[i+1];
+            	}
+			}
+
+			/*
 
 			const T & back() const
 			{}
