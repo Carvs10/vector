@@ -8,6 +8,7 @@
 #include <algorithm>//std::copy
 #include <initializer_list>
 #include <bitset>//make shift oparations
+#include <stdexcept> //std::out of range
 
 namespace sc{
 
@@ -318,16 +319,30 @@ namespace sc{
 			{
 				return data[0];
 			}
-			/*
-			void assign ( size_type count, const T & value )
-			{}*/
 			
-			T & operator[] ( size_type pos )
+			void assign ( size_type count, const T & value )//coloca o valor em todos os elementos do vetor antigo  de forma contada //testar
+			{
+				SIZE = count;
+
+				for(int i = 0; i< SIZE; i++){
+					data[i] = value;
+				}
+			}
+			
+			T & operator[] ( size_type pos )//libera a operação de incerção por barras
 			{
 				return data[ pos ];
 			}
 
-			//*T & at ( size_type pos );
+			T & at ( size_type pos )//retorna o objeto dentro do index dado caso o index seja valido// testar
+			{
+				if (SIZE < pos){
+					//std::out_of_range;
+				}
+				else{
+					return data[ pos ];
+				}
+			}
 
 			
 
@@ -339,13 +354,40 @@ namespace sc{
 			{
 				CAPACITY = SIZE;
 			}
-			/*
-			bool operator==( const vector& lhs, const vector& rhs);
+			
+			
+			friend bool operator== ( const vector& lhs, const vector& rhs)//nao ta funcionando direito
+			{
+				if(lhs.size() == rhs.size()){
 
-			bool operator!=( const vector& lhs, const vector& rhs);
+					for(int i = 0; i < lhs.size(); i++){
+						if(lhs[i] != rhs[i]){
+							return false;
+						}
+					}
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
 
-		*/
-			private:
+			friend bool operator!= ( const vector& lhs, const vector& rhs)//não ta funcionando direito
+			{
+				if(lhs.size() == rhs.size()){
+
+					for(int i = 0; i < lhs.size(); i++){
+						if(lhs[i] != rhs[i]){
+							return true;
+						}
+					}
+					return false;
+				}
+				else{
+					return true;
+				}
+			}
+		private:
 				/// Aumenta a capacidade de armazenamento do vector para o valor `new_cap` fornecido.
         	void reserve( size_t new_cap )
         	{

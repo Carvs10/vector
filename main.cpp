@@ -40,6 +40,11 @@ int main(){
 
     vec1.pop_front();
 
+    //if(vec1 == vec3){
+ 		//std::cout << "sera" <<std::endl;
+    //}
+    //std::cout << "sera" <<std::endl;
+
 	std::cout << "main \n";
 
 	for(int i= 0;i<6; i++){
