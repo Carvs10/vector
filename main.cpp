@@ -33,10 +33,15 @@ int main(){
 
     std::cout << vec1.capacity()<<std::endl;
 
+    // push
+
+    vec1.push_front(5);
+    //b.push_back(5);
+
 	std::cout << "main \n";
 
-	for(int i= 0;i<5; i++){
-		std::cout << b[i]<<std::endl;
+	for(int i= 0;i<6; i++){
+		std::cout << vec1[i]<<std::endl;
 	}
 
 	return 0;

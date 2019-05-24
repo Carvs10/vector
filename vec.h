@@ -7,7 +7,7 @@
 #include <exception>
 #include <algorithm>//std::copy
 #include <initializer_list>
-
+#include <bitset>//make shift oparations
 
 namespace sc{
 
@@ -226,7 +226,7 @@ namespace sc{
 			}
 
 
-			//=============>Capacity methods
+			//======================> Capacity methods:
 			
 			size_type size() const
 			{
@@ -247,18 +247,54 @@ namespace sc{
 			{
 				return CAPACITY;
 			}
-			/*
-			void clear()
-			{}
 
+			//=====================> Modifiers methods:
 			
-
-			void push_front( const T & value )
-			{}
+			void clear()
+			{	
+				//data[]
+				SIZE = 0 ;
+			}
 
 			void push_back( const T & value )
-			{}
+			{
+				// Verificar se tem espaço para receber o novo elemento.
+            	if ( SIZE == CAPACITY )
+            	{
+                	std::cout << "[push_back] : capacity = " << CAPACITY << ", estou dobrando...\n";
+                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );//FALTA ENTENDER ESSA LINHA DE CODIGO
+            	}
 
+            	// Inserir normalmente.
+           		 data[SIZE++] = value;
+            	//*begin() = value;
+			}
+			
+			void push_front( const T & value )
+			{
+				// Verificar se tem espaço para receber o novo elemento.
+            	if ( SIZE == CAPACITY )
+            	{
+                	std::cout << "[push_front] : capacity = " << CAPACITY << ", estou dobrando...\n";
+                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );//FALTA ENTENDER ESSA LINHA DE CODIGO
+            	}
+            	SIZE++;
+            	// Inserir normalmente.
+            	//transferir um bloco de memoria para o lado
+            	//int l = 0;
+            	for(int i = SIZE; i > 0; i--){
+
+            		data[i] = data[i-1];
+            	}
+
+            	data[0] = value;
+
+           		//data[SIZE++] = value;
+            	//*begin() = value;
+			}
+	
+			
+			/*
 			void pop_front()
 			{}
 
@@ -293,10 +329,30 @@ namespace sc{
 
 			bool operator!=( const vector& lhs, const vector& rhs);
 
-
-
 		*/
-		
+			private:
+				/// Aumenta a capacidade de armazenamento do vector para o valor `new_cap` fornecido.
+        	void reserve( size_t new_cap )
+        	{
+            	// Se a capacidade nova < capacidade atual, não faço nada.
+            	if ( new_cap <= CAPACITY ) return;
+
+            	// Passo 1: alocar nova memória com tamanho solicitado.
+            	T * temp = new T[ new_cap ];
+
+            	// Passo 2: copiar os dados da memória antiga para a nova.
+            	std::copy( &data[0], &data[SIZE],  temp );
+            	//std::copy( begin(), end(), temp );
+
+            	// Passo 3: Liberar a memória antiga.
+            	delete[] data;
+
+            	// Passo 4: Redirecionar ponteiro para a nova (maior) memória.
+            	data = temp;
+
+            	// Passo 5: Atualizações internas.
+            	CAPACITY = new_cap;
+        }
 	};
 }
 
