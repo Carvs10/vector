@@ -300,21 +300,25 @@ namespace sc{
 			void pop_front()
 			{
 				SIZE--;
-				
+
 				for(int i = 0; i < SIZE; i++){
 
             		data[i] = data[i+1];
             	}
 			}
 
+			
+
+			const T & back() const//retorna o objeto do final da lista
+			{
+				return data[SIZE];
+			}
+
+			const T & front() const//retorna o objeto do inicio da lista
+			{
+				return data[0];
+			}
 			/*
-
-			const T & back() const
-			{}
-
-			const T & front() const
-			{}
-
 			void assign ( size_type count, const T & value )
 			{}*/
 			
@@ -323,16 +327,19 @@ namespace sc{
 				return data[ pos ];
 			}
 
-			/*T & at ( size_type pos );
+			//*T & at ( size_type pos );
 
 			
 
-			void reserve ( size_type new_cap);
+			
 
-			capacity();
+			
 
-			shrink_to_fit();
-
+			void shrink_to_fit()//iguala a capacidade ao tamanho!
+			{
+				CAPACITY = SIZE;
+			}
+			/*
 			bool operator==( const vector& lhs, const vector& rhs);
 
 			bool operator!=( const vector& lhs, const vector& rhs);
