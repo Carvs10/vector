@@ -134,8 +134,8 @@ namespace sc{
 			///==> Special Members
 			///Constructor: build a new vector.
 			vector( ) :
-				data { new T[ 0 ] },
-				size { 0 },
+				data { new T[ 0] },
+				size { 0},
 				capacity { 0 }
 
 			{/* Initialize the vector with null values */std::cout << "contruu 1\n";}
@@ -147,10 +147,19 @@ namespace sc{
 			delete [] data;	std::cout << "destruiu 1\n";
 			}
 
+			//construindo o vetor com elementos ja escolhidos
 			vector( std::initializer_list<T> ilist )
 			{
-				//data = new T[ count];
-				std::cout << "to aqui 1\n";
+				data = new T[ ilist.size()];
+				int i;
+				for( const T& e : ilist){
+
+					data[i] = e;
+					i++;
+				}
+
+				
+				std::cout << "construiu 4\n";
 			}
 
 			explicit vector( size_type count ):
@@ -158,17 +167,26 @@ namespace sc{
 				capacity{ count }
 			{
 				data = new T[ count ];
-				std::cout << "to aqui 1\n";
+				std::cout << "construiu 2\n";
 			}
 
-			/*template < typename InpultIt >
-			vector ( InpultIt first, InputIt last)
-			{}
+			template < typename InpultIt >
+			vector ( InpultIt first, InpultIt last)
+			{
+				data = new T[ last - first ];
+				//while(first < last){
+					//first++;
+				//}
+				std::cout << "construiu 3\n";
+			}
 
 			vector( const vector& other)
-			{}
+			{	
+				std::cout << "construiu 5\n";
+				data = new T[ other.capacity ];
+			}
 			
-			vector& operator=( const vector& other)
+			/*vector& operator=( const vector& other)
 			{}
 
 			vector& operator=( std::initializer_list<T> ilist )
