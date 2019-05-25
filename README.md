@@ -1,7 +1,7 @@
 # Vector
 Class Vector programmed in languange in C++ with iterator
 
-##Summary
+## Summary
 
 **[1. Introduction](#1-introduction)**
 
@@ -11,18 +11,18 @@ Class Vector programmed in languange in C++ with iterator
 
 **[4. Authorship](#4-authorship)**
 
-##1. Intorduction
+## 1. Intorduction
 
 The Class Vector is a series of functions to manipulate vectors with different sizes.
 Also, you can use all the methods that normal class vector from std has.
 This project was developed following instructions and orientations given by Prof. Selan Rodrigues dos Santos.
 By building this, we want to see how works a class and all its methods developing them by ourselves.
 
-##2. The Algorithms
+## 2. The Algorithms
 
 We developed all the implementation based on problems described at `projeto_TAD_vector.pdf` file.
 
-##3. Compilling
+## 3. Compilling
 
 To compile this project, you need to:
 
@@ -34,8 +34,8 @@ To compile this project, you need to:
 
 `./bin/exe`
 
-##4. Authorship
+## 4. Authorship
 
 This C++ class was developed by João Victtor Carvalho and Pedro Henrique Alves Cardoso.
-##Compilation 
-For the compilation of the class, 
+
+IMD/UFRN 2019
