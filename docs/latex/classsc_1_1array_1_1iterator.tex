@@ -1,0 +1,191 @@
+\hypertarget{classsc_1_1array_1_1iterator}{}\section{sc\+:\+:array$<$ T, S\+I\+ZE $>$\+:\+:iterator Class Reference}
+\label{classsc_1_1array_1_1iterator}\index{sc\+::array$<$ T, S\+I\+Z\+E $>$\+::iterator@{sc\+::array$<$ T, S\+I\+Z\+E $>$\+::iterator}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \& \hyperlink{classsc_1_1array_1_1iterator_a8015b13eb5e649591e3b0265546a0201}{reference}
+\item 
+typedef size\+\_\+t \hyperlink{classsc_1_1array_1_1iterator_aeec0cf52de962a18d79cdbcdfe74be92}{size\+\_\+type}
+\item 
+typedef T $\ast$ \hyperlink{classsc_1_1array_1_1iterator_a1b59529d09bbd80445a8d931b102dbe0}{pointer}
+\item 
+typedef std\+::ptrdiff\+\_\+t \hyperlink{classsc_1_1array_1_1iterator_aee2e53646f6728620da44512ec0ea2d1}{difference\+\_\+type}
+\item 
+typedef std\+::bidirectinonal\+\_\+iterator\+\_\+tag \hyperlink{classsc_1_1array_1_1iterator_a75eb4a75d259d12310f3be4d16e8a7b9}{iterator\+\_\+category}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsc_1_1array_1_1iterator_a92c82b17f5fef34bb3530fa95887c5da}{iterator} (T $\ast$pt=nullptr)
+\item 
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \& \hyperlink{classsc_1_1array_1_1iterator_a764f122ad659642c353cf09df46fa88e}{operator=} (const \hyperlink{classsc_1_1array_1_1iterator}{iterator} \&rhs)
+\item 
+T \& \hyperlink{classsc_1_1array_1_1iterator_abadbb040e3ec615b4c08bcb2a6427272}{operator$\ast$} (void)
+\item 
+const T \& \hyperlink{classsc_1_1array_1_1iterator_a97cc19147471cd7b7b72174a3fe55159}{operator$\ast$} (void) const
+\item 
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array_1_1iterator_a034796f5c6189abd3ee74384a5a37488}{operator++} (void)
+\begin{DoxyCompactList}\small\item\em ++it pré incremento \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array_1_1iterator_a083298121c2b04aadd273763fb9db65f}{operator++} (int)
+\begin{DoxyCompactList}\small\item\em it++ pos incremento \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array_1_1iterator_a75ad3e03c3fa61baef586f5f2486ecd8}{operator-\/-\/} (void)
+\begin{DoxyCompactList}\small\item\em pré decremento \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array_1_1iterator_aaa661b8d468c66579c923ced7e3dded1}{operator-\/-\/} (int)
+\begin{DoxyCompactList}\small\item\em pós decremento \end{DoxyCompactList}\item 
+bool \hyperlink{classsc_1_1array_1_1iterator_a7bd7f976868a154eb215f0c961444097}{operator==} (const \hyperlink{classsc_1_1array_1_1iterator}{iterator} \&it) const
+\begin{DoxyCompactList}\small\item\em Comparação ==. \end{DoxyCompactList}\item 
+bool \hyperlink{classsc_1_1array_1_1iterator_ac84816f86bbbe67a5a0951dba2668538}{operator!=} (const \hyperlink{classsc_1_1array_1_1iterator}{iterator} \&it) const
+\begin{DoxyCompactList}\small\item\em Comparação !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classsc_1_1array_1_1iterator_a759319abf650f16d89547f520f7bb5a6}{ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_aee2e53646f6728620da44512ec0ea2d1}\label{classsc_1_1array_1_1iterator_aee2e53646f6728620da44512ec0ea2d1}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{difference\+\_\+type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+typedef std\+::ptrdiff\+\_\+t \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::\hyperlink{classsc_1_1array_1_1iterator_aee2e53646f6728620da44512ec0ea2d1}{iterator\+::difference\+\_\+type}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a75eb4a75d259d12310f3be4d16e8a7b9}\label{classsc_1_1array_1_1iterator_a75eb4a75d259d12310f3be4d16e8a7b9}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!iterator\+\_\+category@{iterator\+\_\+category}}
+\index{iterator\+\_\+category@{iterator\+\_\+category}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{iterator\+\_\+category}{iterator\_category}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+typedef std\+::bidirectinonal\+\_\+iterator\+\_\+tag \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::\hyperlink{classsc_1_1array_1_1iterator_a75eb4a75d259d12310f3be4d16e8a7b9}{iterator\+::iterator\+\_\+category}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a1b59529d09bbd80445a8d931b102dbe0}\label{classsc_1_1array_1_1iterator_a1b59529d09bbd80445a8d931b102dbe0}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+typedef T$\ast$ \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::\hyperlink{classsc_1_1array_1_1iterator_a1b59529d09bbd80445a8d931b102dbe0}{iterator\+::pointer}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a8015b13eb5e649591e3b0265546a0201}\label{classsc_1_1array_1_1iterator_a8015b13eb5e649591e3b0265546a0201}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!reference@{reference}}
+\index{reference@{reference}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+typedef T\& \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::\hyperlink{classsc_1_1array_1_1iterator_a8015b13eb5e649591e3b0265546a0201}{iterator\+::reference}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_aeec0cf52de962a18d79cdbcdfe74be92}\label{classsc_1_1array_1_1iterator_aeec0cf52de962a18d79cdbcdfe74be92}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+typedef size\+\_\+t \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::\hyperlink{classsc_1_1array_1_1iterator_aeec0cf52de962a18d79cdbcdfe74be92}{iterator\+::size\+\_\+type}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a92c82b17f5fef34bb3530fa95887c5da}\label{classsc_1_1array_1_1iterator_a92c82b17f5fef34bb3530fa95887c5da}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!iterator@{iterator}}
+\index{iterator@{iterator}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+\hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::iterator (\begin{DoxyParamCaption}\item[{T $\ast$}]{pt = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_ac84816f86bbbe67a5a0951dba2668538}\label{classsc_1_1array_1_1iterator_ac84816f86bbbe67a5a0951dba2668538}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+bool \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classsc_1_1array_1_1iterator}{iterator} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparação !=. 
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_abadbb040e3ec615b4c08bcb2a6427272}\label{classsc_1_1array_1_1iterator_abadbb040e3ec615b4c08bcb2a6427272}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+T\& \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a97cc19147471cd7b7b72174a3fe55159}\label{classsc_1_1array_1_1iterator_a97cc19147471cd7b7b72174a3fe55159}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+const T\& \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a034796f5c6189abd3ee74384a5a37488}\label{classsc_1_1array_1_1iterator_a034796f5c6189abd3ee74384a5a37488}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++it pré incremento 
+
+Primeiro modo; \mbox{\Hypertarget{classsc_1_1array_1_1iterator_a083298121c2b04aadd273763fb9db65f}\label{classsc_1_1array_1_1iterator_a083298121c2b04aadd273763fb9db65f}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+it++ pos incremento 
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a75ad3e03c3fa61baef586f5f2486ecd8}\label{classsc_1_1array_1_1iterator_a75ad3e03c3fa61baef586f5f2486ecd8}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pré decremento 
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_aaa661b8d468c66579c923ced7e3dded1}\label{classsc_1_1array_1_1iterator_aaa661b8d468c66579c923ced7e3dded1}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+\hyperlink{classsc_1_1array_1_1iterator}{iterator} \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pós decremento 
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a764f122ad659642c353cf09df46fa88e}\label{classsc_1_1array_1_1iterator_a764f122ad659642c353cf09df46fa88e}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+\hyperlink{classsc_1_1array_1_1iterator}{iterator}\& \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classsc_1_1array_1_1iterator}{iterator} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a7bd7f976868a154eb215f0c961444097}\label{classsc_1_1array_1_1iterator_a7bd7f976868a154eb215f0c961444097}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+bool \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classsc_1_1array_1_1iterator}{iterator} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparação ==. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsc_1_1array_1_1iterator_a759319abf650f16d89547f520f7bb5a6}\label{classsc_1_1array_1_1iterator_a759319abf650f16d89547f520f7bb5a6}} 
+\index{sc\+::array\+::iterator@{sc\+::array\+::iterator}!ptr@{ptr}}
+\index{ptr@{ptr}!sc\+::array\+::iterator@{sc\+::array\+::iterator}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t S\+I\+ZE$>$ \\
+T$\ast$ \hyperlink{classsc_1_1array}{sc\+::array}$<$ T, S\+I\+ZE $>$\+::iterator\+::ptr\hspace{0.3cm}{\ttfamily [private]}}
+

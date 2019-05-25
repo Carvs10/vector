@@ -1,0 +1,129 @@
+\hypertarget{classvector}{}\section{vector$<$ T $>$ Class Template Reference}
+\label{classvector}\index{vector$<$ T $>$@{vector$<$ T $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classvector_a3a83d5c85147ccc1a6de86a1204f0e06}{vector} (size\+\_\+t count=0)
+\item 
+\hyperlink{classvector_aab47f935167e9fca4dc2aec378cee271}{vector} (const \hyperlink{classvector}{vector} \&source)
+\item 
+\hyperlink{classvector}{vector} \& \hyperlink{classvector_a1a79d01cf69404ebf0e06ea9697790dd}{operator=} (const \hyperlink{classvector}{vector} \&rhs)
+\item 
+\hyperlink{classvector_a7bc236f547bb5debe890fa8ebaabe965}{$\sim$vector} ()
+\item 
+void \hyperlink{classvector_ad76deb64969b591fe8accbd2f69ea271}{push\+\_\+back} (const T \&value)
+\item 
+void \hyperlink{classvector_a187dd0a9042d1e24c08d27d7e1027f06}{reserve} (size\+\_\+t new\+\_\+cap)
+\begin{DoxyCompactList}\small\item\em Aumenta a capacidade de armazenamento do vector para o valor {\ttfamily new\+\_\+cap} fornecido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classvector_a7814838e8ff6e26c99a7ae1774fb9188}{data}
+\begin{DoxyCompactList}\small\item\em Area de armazenamento. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classvector_aaa851d34f893e80eb4ffc33e93873d02}{size}
+\begin{DoxyCompactList}\small\item\em Número de elementos atualmente no vector. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classvector_ac3241a0ca844ecb2a31813543a33e6fb}{capacity}
+\begin{DoxyCompactList}\small\item\em Capacidade máxima (atual) do vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classvector_add6bce5bf4a9ad1887f2b17dd4cc4184}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{classvector}{vector} \&v)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classvector_a3a83d5c85147ccc1a6de86a1204f0e06}\label{classvector_a3a83d5c85147ccc1a6de86a1204f0e06}} 
+\index{vector@{vector}!vector@{vector}}
+\index{vector@{vector}!vector@{vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classvector}{vector}$<$ T $>$\+::\hyperlink{classvector}{vector} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvector_aab47f935167e9fca4dc2aec378cee271}\label{classvector_aab47f935167e9fca4dc2aec378cee271}} 
+\index{vector@{vector}!vector@{vector}}
+\index{vector@{vector}!vector@{vector}}
+\subsubsection{\texorpdfstring{vector()}{vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classvector}{vector}$<$ T $>$\+::\hyperlink{classvector}{vector} (\begin{DoxyParamCaption}\item[{const \hyperlink{classvector}{vector}$<$ T $>$ \&}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvector_a7bc236f547bb5debe890fa8ebaabe965}\label{classvector_a7bc236f547bb5debe890fa8ebaabe965}} 
+\index{vector@{vector}!````~vector@{$\sim$vector}}
+\index{````~vector@{$\sim$vector}!vector@{vector}}
+\subsubsection{\texorpdfstring{$\sim$vector()}{~vector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classvector}{vector}$<$ T $>$\+::$\sim$\hyperlink{classvector}{vector} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classvector_a1a79d01cf69404ebf0e06ea9697790dd}\label{classvector_a1a79d01cf69404ebf0e06ea9697790dd}} 
+\index{vector@{vector}!operator=@{operator=}}
+\index{operator=@{operator=}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classvector}{vector}\& \hyperlink{classvector}{vector}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classvector}{vector}$<$ T $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvector_ad76deb64969b591fe8accbd2f69ea271}\label{classvector_ad76deb64969b591fe8accbd2f69ea271}} 
+\index{vector@{vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!vector@{vector}}
+\subsubsection{\texorpdfstring{push\+\_\+back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{classvector}{vector}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classvector_a187dd0a9042d1e24c08d27d7e1027f06}\label{classvector_a187dd0a9042d1e24c08d27d7e1027f06}} 
+\index{vector@{vector}!reserve@{reserve}}
+\index{reserve@{reserve}!vector@{vector}}
+\subsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \hyperlink{classvector}{vector}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+\_\+cap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aumenta a capacidade de armazenamento do vector para o valor {\ttfamily new\+\_\+cap} fornecido. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classvector_add6bce5bf4a9ad1887f2b17dd4cc4184}\label{classvector_add6bce5bf4a9ad1887f2b17dd4cc4184}} 
+\index{vector@{vector}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!vector@{vector}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \hyperlink{classvector}{vector}$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classvector_ac3241a0ca844ecb2a31813543a33e6fb}\label{classvector_ac3241a0ca844ecb2a31813543a33e6fb}} 
+\index{vector@{vector}!capacity@{capacity}}
+\index{capacity@{capacity}!vector@{vector}}
+\subsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \hyperlink{classvector}{vector}$<$ T $>$\+::capacity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Capacidade máxima (atual) do vector. 
+
+\mbox{\Hypertarget{classvector_a7814838e8ff6e26c99a7ae1774fb9188}\label{classvector_a7814838e8ff6e26c99a7ae1774fb9188}} 
+\index{vector@{vector}!data@{data}}
+\index{data@{data}!vector@{vector}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \hyperlink{classvector}{vector}$<$ T $>$\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Area de armazenamento. 
+
+\mbox{\Hypertarget{classvector_aaa851d34f893e80eb4ffc33e93873d02}\label{classvector_aaa851d34f893e80eb4ffc33e93873d02}} 
+\index{vector@{vector}!size@{size}}
+\index{size@{size}!vector@{vector}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \hyperlink{classvector}{vector}$<$ T $>$\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de elementos atualmente no vector. 
+

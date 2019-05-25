@@ -1,0 +1,195 @@
+\hypertarget{classsc_1_1vector_1_1iterator}{}\section{sc\+:\+:vector$<$ T $>$\+:\+:iterator Class Reference}
+\label{classsc_1_1vector_1_1iterator}\index{sc\+::vector$<$ T $>$\+::iterator@{sc\+::vector$<$ T $>$\+::iterator}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T \& \hyperlink{classsc_1_1vector_1_1iterator_a266d58fdf67f2129ef3dc99efd652e15}{reference}
+\item 
+typedef std\+::size\+\_\+t \hyperlink{classsc_1_1vector_1_1iterator_adbbf48cc59c1a22f89c9fa6a2eb0c765}{size\+\_\+type}
+\item 
+typedef T $\ast$ \hyperlink{classsc_1_1vector_1_1iterator_a518f02aadbb3fd937bdbda24120d2678}{pointer}
+\item 
+typedef std\+::ptrdiff\+\_\+t \hyperlink{classsc_1_1vector_1_1iterator_a7089358e9f654206713ecd3951ac3545}{difference\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsc_1_1vector_1_1iterator_adcef8cb0104f9035bc98eacb4e2e29e7}{iterator} (T $\ast$pt=nullptr)
+\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \& \hyperlink{classsc_1_1vector_1_1iterator_a744168c87e46c6e962c30eb3ee3299ab}{operator=} (const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&rhs)
+\item 
+T \& \hyperlink{classsc_1_1vector_1_1iterator_a195ce221fcaf875739014d681073eaeb}{operator$\ast$} (void)
+\item 
+const T \& \hyperlink{classsc_1_1vector_1_1iterator_acc1afb3186e955cd261c757dae2b587a}{operator$\ast$} (void) const
+\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_1_1iterator_a0579f178e03522ffa042fdbf49cbf383}{operator++} (void)
+\begin{DoxyCompactList}\small\item\em ++it pré incremento \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}{operator++} (int)
+\begin{DoxyCompactList}\small\item\em it++ pos incremento \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_1_1iterator_a8be1d69a3f7f0d220487463a60a5efd4}{operator-\/-\/} (void)
+\begin{DoxyCompactList}\small\item\em pré decremento \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_1_1iterator_ab4a76691eb8ba0da9e014fa49f4cce4f}{operator-\/-\/} (int)
+\begin{DoxyCompactList}\small\item\em pós decremento \end{DoxyCompactList}\item 
+bool \hyperlink{classsc_1_1vector_1_1iterator_ab635a96af6c0bcc3fe888e2568287df1}{operator==} (const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&it) const
+\begin{DoxyCompactList}\small\item\em Comparação ==. \end{DoxyCompactList}\item 
+bool \hyperlink{classsc_1_1vector_1_1iterator_ae0f420848b61b2f1bd5c7dc414082d29}{operator!=} (const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&it) const
+\begin{DoxyCompactList}\small\item\em Comparação !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \hyperlink{classsc_1_1vector_1_1iterator_a8f6a0c77f66fe2331b1837b341c08dc5}{ptr}
+\begin{DoxyCompactList}\small\item\em Private data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class sc\+::vector$<$ T $>$\+::iterator}
+
+Public data
+
+Iterator Class Used together with vector 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a7089358e9f654206713ecd3951ac3545}\label{classsc_1_1vector_1_1iterator_a7089358e9f654206713ecd3951ac3545}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{difference\+\_\+type}{difference\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef std\+::ptrdiff\+\_\+t \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::\hyperlink{classsc_1_1vector_1_1iterator_a7089358e9f654206713ecd3951ac3545}{iterator\+::difference\+\_\+type}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a518f02aadbb3fd937bdbda24120d2678}\label{classsc_1_1vector_1_1iterator_a518f02aadbb3fd937bdbda24120d2678}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!pointer@{pointer}}
+\index{pointer@{pointer}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef T$\ast$ \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::\hyperlink{classsc_1_1vector_1_1iterator_a518f02aadbb3fd937bdbda24120d2678}{iterator\+::pointer}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a266d58fdf67f2129ef3dc99efd652e15}\label{classsc_1_1vector_1_1iterator_a266d58fdf67f2129ef3dc99efd652e15}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!reference@{reference}}
+\index{reference@{reference}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef T\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::\hyperlink{classsc_1_1vector_1_1iterator_a266d58fdf67f2129ef3dc99efd652e15}{iterator\+::reference}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_adbbf48cc59c1a22f89c9fa6a2eb0c765}\label{classsc_1_1vector_1_1iterator_adbbf48cc59c1a22f89c9fa6a2eb0c765}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{size\+\_\+type}{size\_type}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+typedef std\+::size\+\_\+t \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::\hyperlink{classsc_1_1vector_1_1iterator_adbbf48cc59c1a22f89c9fa6a2eb0c765}{iterator\+::size\+\_\+type}}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_adcef8cb0104f9035bc98eacb4e2e29e7}\label{classsc_1_1vector_1_1iterator_adcef8cb0104f9035bc98eacb4e2e29e7}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!iterator@{iterator}}
+\index{iterator@{iterator}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{iterator()}{iterator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::iterator (\begin{DoxyParamCaption}\item[{T $\ast$}]{pt = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_ae0f420848b61b2f1bd5c7dc414082d29}\label{classsc_1_1vector_1_1iterator_ae0f420848b61b2f1bd5c7dc414082d29}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparação !=. 
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a195ce221fcaf875739014d681073eaeb}\label{classsc_1_1vector_1_1iterator_a195ce221fcaf875739014d681073eaeb}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_acc1afb3186e955cd261c757dae2b587a}\label{classsc_1_1vector_1_1iterator_acc1afb3186e955cd261c757dae2b587a}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a0579f178e03522ffa042fdbf49cbf383}\label{classsc_1_1vector_1_1iterator_a0579f178e03522ffa042fdbf49cbf383}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+++it pré incremento 
+
+Primeiro modo; \mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}\label{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+it++ pos incremento 
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a8be1d69a3f7f0d220487463a60a5efd4}\label{classsc_1_1vector_1_1iterator_a8be1d69a3f7f0d220487463a60a5efd4}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pré decremento 
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_ab4a76691eb8ba0da9e014fa49f4cce4f}\label{classsc_1_1vector_1_1iterator_ab4a76691eb8ba0da9e014fa49f4cce4f}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pós decremento 
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a744168c87e46c6e962c30eb3ee3299ab}\label{classsc_1_1vector_1_1iterator_a744168c87e46c6e962c30eb3ee3299ab}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator=@{operator=}}
+\index{operator=@{operator=}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator}\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_ab635a96af6c0bcc3fe888e2568287df1}\label{classsc_1_1vector_1_1iterator_ab635a96af6c0bcc3fe888e2568287df1}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&}]{it }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparação ==. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a8f6a0c77f66fe2331b1837b341c08dc5}\label{classsc_1_1vector_1_1iterator_a8f6a0c77f66fe2331b1837b341c08dc5}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!ptr@{ptr}}
+\index{ptr@{ptr}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private data. 
+
+Pointer to data. 
