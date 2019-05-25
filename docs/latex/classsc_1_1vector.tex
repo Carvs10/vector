@@ -8,6 +8,8 @@ Class Vector.
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{classsc_1_1vector_1_1c__iterator}{c\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Class Const\+\_\+iterator. \end{DoxyCompactList}\item 
 class \hyperlink{classsc_1_1vector_1_1iterator}{iterator}
 \end{DoxyCompactItemize}
 \subsection*{Public Types}
@@ -69,21 +71,30 @@ T \& \hyperlink{classsc_1_1vector_ab93846461528695f38e1d143231b0653}{operator\mb
 T \& \hyperlink{classsc_1_1vector_ab6fc47c9994c531ff8d0a0b46fe422f8}{at} (\hyperlink{classsc_1_1vector_a48bf37ba1a6d0c13504414d86e27c399}{size\+\_\+type} pos)
 \item 
 void \hyperlink{classsc_1_1vector_aaeb01dacb26f39fb08cffc6f274284fd}{shrink\+\_\+to\+\_\+fit} ()
-\end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classsc_1_1vector_afd98588509a1f15ce5621735f69b01bf}{reserve} (size\+\_\+t new\+\_\+cap)
-\begin{DoxyCompactList}\small\item\em Private Data from Vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Private Data from Vector. \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_aefba74791ea0f1ab9b9ad95d35bf9497}{begin} ()
+\begin{DoxyCompactList}\small\item\em Iterator Methods. \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_a92378196850ffdcc094f266d40cc2cc5}{end} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator pointing to the i.\+e the position after the last item in the list. \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1c__iterator}{c\+\_\+iterator} \hyperlink{classsc_1_1vector_aa9ef5584dc8f0d021f3689b1b617607d}{cbegin} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator pointing to the first item in the list. \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1c__iterator}{c\+\_\+iterator} \hyperlink{classsc_1_1vector_a1ab4f567a393988471cc01a206524dee}{cend} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator pointing to the i.\+e positon just after the last item in the list. \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_ac55608c5cee9a8311cbe7c4fde998a9f}{insert} (\hyperlink{classsc_1_1vector_1_1iterator}{iterator} pos, const T \&value)
+\begin{DoxyCompactList}\small\item\em Insert the value before the pos required and return the position. \end{DoxyCompactList}\item 
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_a9dcc8ea80726caae68ac935ca677abfe}{erase} (\hyperlink{classsc_1_1vector_1_1iterator}{iterator} pos)
+\begin{DoxyCompactList}\small\item\em Erase the element at pos required. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 T $\ast$ \hyperlink{classsc_1_1vector_ab0607397430a55a5a484dfea79867467}{data}
 \item 
 std\+::size\+\_\+t \hyperlink{classsc_1_1vector_ad6729b20ad502c5fdf480fec848476f6}{S\+I\+ZE}
-\begin{DoxyCompactList}\small\item\em número de elemnetos no vector \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number of elements in vector. \end{DoxyCompactList}\item 
 std\+::size\+\_\+t \hyperlink{classsc_1_1vector_ae4c67859be8cfdd445d2700d55125184}{C\+A\+P\+A\+C\+I\+TY}
-\begin{DoxyCompactList}\small\item\em Capacidade máxima (atual) do vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Maximum capacity in vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -211,14 +222,47 @@ Returns the object at the index pos in the array,with bounds-\/checking \mbox{\H
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 const T\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the object at the end of the list \mbox{\Hypertarget{classsc_1_1vector_a318c4ab34bd9605214e99db94c4258a9}\label{classsc_1_1vector_a318c4ab34bd9605214e99db94c4258a9}} 
+Returns the object at the end of the list \mbox{\Hypertarget{classsc_1_1vector_aefba74791ea0f1ab9b9ad95d35bf9497}\label{classsc_1_1vector_aefba74791ea0f1ab9b9ad95d35bf9497}} 
+\index{sc\+::vector@{sc\+::vector}!begin@{begin}}
+\index{begin@{begin}!sc\+::vector@{sc\+::vector}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iterator Methods. 
+
+Returns an iterator pointing to the first item in the list. \mbox{\Hypertarget{classsc_1_1vector_a318c4ab34bd9605214e99db94c4258a9}\label{classsc_1_1vector_a318c4ab34bd9605214e99db94c4258a9}} 
 \index{sc\+::vector@{sc\+::vector}!capacity@{capacity}}
 \index{capacity@{capacity}!sc\+::vector@{sc\+::vector}}
 \subsubsection{\texorpdfstring{capacity()}{capacity()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \hyperlink{classsc_1_1vector_a48bf37ba1a6d0c13504414d86e27c399}{size\+\_\+type} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Return the internal storage capacity of the array \mbox{\Hypertarget{classsc_1_1vector_a17c6d622cf64278d03feac9c38fa3684}\label{classsc_1_1vector_a17c6d622cf64278d03feac9c38fa3684}} 
+Return the internal storage capacity of the array \mbox{\Hypertarget{classsc_1_1vector_aa9ef5584dc8f0d021f3689b1b617607d}\label{classsc_1_1vector_aa9ef5584dc8f0d021f3689b1b617607d}} 
+\index{sc\+::vector@{sc\+::vector}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!sc\+::vector@{sc\+::vector}}
+\subsubsection{\texorpdfstring{cbegin()}{cbegin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1c__iterator}{c\+\_\+iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::cbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const iterator pointing to the first item in the list. 
+
+\mbox{\Hypertarget{classsc_1_1vector_a1ab4f567a393988471cc01a206524dee}\label{classsc_1_1vector_a1ab4f567a393988471cc01a206524dee}} 
+\index{sc\+::vector@{sc\+::vector}!cend@{cend}}
+\index{cend@{cend}!sc\+::vector@{sc\+::vector}}
+\subsubsection{\texorpdfstring{cend()}{cend()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1c__iterator}{c\+\_\+iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::cend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const iterator pointing to the i.\+e positon just after the last item in the list. 
+
+\mbox{\Hypertarget{classsc_1_1vector_a17c6d622cf64278d03feac9c38fa3684}\label{classsc_1_1vector_a17c6d622cf64278d03feac9c38fa3684}} 
 \index{sc\+::vector@{sc\+::vector}!clear@{clear}}
 \index{clear@{clear}!sc\+::vector@{sc\+::vector}}
 \subsubsection{\texorpdfstring{clear()}{clear()}}
@@ -236,14 +280,47 @@ Remove (either logically or physically) all elements from the container \mbox{\H
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 bool \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns true if the container contains no elements, and false otherwise \mbox{\Hypertarget{classsc_1_1vector_a85da6164a082030bd04de354d657da0d}\label{classsc_1_1vector_a85da6164a082030bd04de354d657da0d}} 
+Returns true if the container contains no elements, and false otherwise \mbox{\Hypertarget{classsc_1_1vector_a92378196850ffdcc094f266d40cc2cc5}\label{classsc_1_1vector_a92378196850ffdcc094f266d40cc2cc5}} 
+\index{sc\+::vector@{sc\+::vector}!end@{end}}
+\index{end@{end}!sc\+::vector@{sc\+::vector}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an iterator pointing to the i.\+e the position after the last item in the list. 
+
+\mbox{\Hypertarget{classsc_1_1vector_a9dcc8ea80726caae68ac935ca677abfe}\label{classsc_1_1vector_a9dcc8ea80726caae68ac935ca677abfe}} 
+\index{sc\+::vector@{sc\+::vector}!erase@{erase}}
+\index{erase@{erase}!sc\+::vector@{sc\+::vector}}
+\subsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\hyperlink{classsc_1_1vector_1_1iterator}{iterator}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Erase the element at pos required. 
+
+\mbox{\Hypertarget{classsc_1_1vector_a85da6164a082030bd04de354d657da0d}\label{classsc_1_1vector_a85da6164a082030bd04de354d657da0d}} 
 \index{sc\+::vector@{sc\+::vector}!front@{front}}
 \index{front@{front}!sc\+::vector@{sc\+::vector}}
 \subsubsection{\texorpdfstring{front()}{front()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 const T\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the object at the front of the list \mbox{\Hypertarget{classsc_1_1vector_ac645bc2fa1244d211c9ceecb68d4d539}\label{classsc_1_1vector_ac645bc2fa1244d211c9ceecb68d4d539}} 
+Returns the object at the front of the list \mbox{\Hypertarget{classsc_1_1vector_ac55608c5cee9a8311cbe7c4fde998a9f}\label{classsc_1_1vector_ac55608c5cee9a8311cbe7c4fde998a9f}} 
+\index{sc\+::vector@{sc\+::vector}!insert@{insert}}
+\index{insert@{insert}!sc\+::vector@{sc\+::vector}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{\hyperlink{classsc_1_1vector_1_1iterator}{iterator}}]{pos,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Insert the value before the pos required and return the position. 
+
+\mbox{\Hypertarget{classsc_1_1vector_ac645bc2fa1244d211c9ceecb68d4d539}\label{classsc_1_1vector_ac645bc2fa1244d211c9ceecb68d4d539}} 
 \index{sc\+::vector@{sc\+::vector}!operator=@{operator=}}
 \index{operator=@{operator=}!sc\+::vector@{sc\+::vector}}
 \subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
@@ -297,7 +374,7 @@ Adds value to the front of the list \mbox{\Hypertarget{classsc_1_1vector_afd9858
 \index{reserve@{reserve}!sc\+::vector@{sc\+::vector}}
 \subsubsection{\texorpdfstring{reserve()}{reserve()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-void \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+\_\+cap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+void \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{new\+\_\+cap }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -350,7 +427,7 @@ std\+::size\+\_\+t \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::C\+A\
 
 
 
-Capacidade máxima (atual) do vector. 
+Maximum capacity in vector. 
 
 \mbox{\Hypertarget{classsc_1_1vector_ab0607397430a55a5a484dfea79867467}\label{classsc_1_1vector_ab0607397430a55a5a484dfea79867467}} 
 \index{sc\+::vector@{sc\+::vector}!data@{data}}
@@ -368,5 +445,5 @@ std\+::size\+\_\+t \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::S\+I\
 
 
 
-número de elemnetos no vector 
+Number of elements in vector. 
 

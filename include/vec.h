@@ -1,7 +1,7 @@
 /*!
- * \File vec.h
- * \Implemetation of class vector
- * \Authors João Victtor and Pedro Henrique
+ * \ File vec.h
+ * \ Implemetation of class vector
+ * \ Authors João Victtor and Pedro Henrique
  */
 
 
@@ -87,13 +87,8 @@ namespace sc{
 					/// ++it pré incremento
 					iterator operator++(void)
 					{
-						///Primeiro modo;
-						//++ptr;
-						//return *this;
-
-
-						//Retrona um novo iterador que aponta para o próximo endereço
-						//Segundo modo
+						
+						//Returns a new iterator pointing to the next.
 						return iterator( ++ptr );
 					}
 
@@ -101,7 +96,7 @@ namespace sc{
 						///it++ pos incremento
 					iterator operator++(int)
 					{
-						iterator temp( ptr );// Cria um iterator temporário
+						iterator temp( ptr );// Creats a temporary iterator
 						ptr++;
 						return temp;
 
@@ -118,18 +113,18 @@ namespace sc{
 						/// pós decremento
 					iterator operator--(int)
 					{
-						iterator temp( ptr );// Cria um iterator temporário
+						iterator temp( ptr );// Creats a temporary iterator
 						ptr--;
 						return temp;
 					}
 
 
 
-						/// Comparação ==
+						/// Comparsion ==
 					bool operator==( const iterator &it) const
-					{ return this->ptr == it.ptr; } //devem retornar o mesmo endereço
+					{ return this->ptr == it.ptr; } //Must return same address
 
-						/// Comparação !=
+						/// Comparsion !=
 					bool operator!=( const iterator &it) const
 					{ return this->ptr != it.ptr;}
 
@@ -137,6 +132,8 @@ namespace sc{
 				
 
 		};
+		
+		//! Class Const_iterator
 
 		class c_iterator
 			{
@@ -146,7 +143,7 @@ namespace sc{
 					typedef std::size_t size_type;
 					typedef T* pointer;
 					typedef std::ptrdiff_t difference_type;
-					//typedef std::bidirectinonal_iterator_tag iterator_category;
+					
 
 				//! Private data	
 				private:
@@ -188,13 +185,7 @@ namespace sc{
 					/// ++it pré incremento
 					const iterator operator++(void)
 					{
-						///Primeiro modo;
-						//++ptr;
-						//return *this;
-
-
-						//Retrona um novo iterador que aponta para o próximo endereço
-						//Segundo modo
+						
 						return iterator( ++ptr );
 					}
 
@@ -202,7 +193,7 @@ namespace sc{
 						///it++ pos incremento
 					const iterator operator++(int)
 					{
-						iterator temp( ptr );// Cria um iterator temporário
+						iterator temp( ptr );// Creats a temporary iterator
 						ptr++;
 						return temp;
 
@@ -219,18 +210,18 @@ namespace sc{
 						/// pós decremento
 					const iterator operator--(int)
 					{
-						iterator temp( ptr );// Cria um iterator temporário
+						iterator temp( ptr );// Creats a temporary iterator
 						ptr--;
 						return temp;
 					}
 
 
 
-						/// Comparação ==
+						/// Comparsion ==
 					const bool operator==( const iterator &it) const
-					{ return this->ptr == it.ptr; } //devem retornar o mesmo endereço
+					{ return this->ptr == it.ptr; } //must return same address
 
-						/// Comparação !=
+						/// Comparsion !=
 					const bool operator!=( const iterator &it) const
 					{ return this->ptr != it.ptr;}
 
@@ -246,13 +237,11 @@ namespace sc{
 			using pointer = value_type*;
 			using reference = value_type&;
 			using const_reference = const value_type&;
-			//using iterator = iterator < T >;             //using iterator = MyIterator < T >;
-			//using const_iterator = iterator < const T >  //using const_iterator = MyIterator < const T >
 	
 		private:
 			T * data;
-			std::size_t SIZE; //!< número de elemnetos no vector
-			std::size_t CAPACITY; //!< Capacidade máxima (atual) do vector
+			std::size_t SIZE; //!< Number of elements in vector
+			std::size_t CAPACITY; //!< Maximum capacity in vector
 
 		public:
 			
@@ -267,15 +256,15 @@ namespace sc{
 				SIZE { 0},
 				CAPACITY { 0 }
 
-			{/* Initialize the vector with null values */std::cout << "contruu 1\n";}
+			{/* Initialize the vector with null values */}
 
 			//!
 			 /*! Destructor: delete the vector exiting
 			 */
 			~vector()
-				//delete [] data;
+				
 			{/* Desturct the data in the vector*/
-			delete [] data;	std::cout << "destruiu 1\n";
+			delete [] data;
 			}
 
 			//!
@@ -293,8 +282,6 @@ namespace sc{
 					i++;
 				}
 
-				
-				std::cout << "construiu 4\n";
 			}
 			
 			//!
@@ -305,7 +292,7 @@ namespace sc{
 				CAPACITY{ count }
 			{
 				data = new T[ count ];
-				std::cout << "construiu 2\n";
+				
 			}
 
 			//!
@@ -324,7 +311,7 @@ namespace sc{
 					first++;
 				}
 				
-				std::cout << "construiu 3\n";
+				
 			}
 
 			//!
@@ -335,7 +322,7 @@ namespace sc{
 				SIZE{ other.SIZE },
 				CAPACITY{ other.CAPACITY }
 			{	
-				std::cout << "construiu 5\n";
+				
 				data = new T[ CAPACITY ];
 
 				std::copy( &other.data[0], &other.data[SIZE], data );
@@ -351,7 +338,7 @@ namespace sc{
 			{
 				
 				data = new T[ other.SIZE ];
-				std::cout << "construiu 6\n";
+				
 				std::copy( data, other.SIZE, other.data);
 
 				return *this;	
@@ -363,7 +350,7 @@ namespace sc{
 			vector& operator=( std::initializer_list<T> ilist )
 			{
 				data = new T[ ilist.SIZE ];
-				std::cout << "construiu 6\n";
+				
 				std::copy( data, ilist.SIZE, ilist.data);
 
 				return *this;
@@ -590,7 +577,9 @@ namespace sc{
         	}
 
 
-        	//iterator
+        	//! Iterator Methods
+
+			//!Returns an iterator pointing to the first item in the list.
         	iterator begin()
         	{
         		iterator it(&data[0]);
@@ -598,6 +587,7 @@ namespace sc{
         		return it;
         	}
 
+			//!Returns an iterator pointing to the i.e the position after the last item in the list. 
         	iterator end()
         	{
         		iterator it(&data[SIZE]);
@@ -605,6 +595,7 @@ namespace sc{
         		return it;
         	}
 
+			//!Returns a const iterator pointing to the first item in the list
         	c_iterator cbegin() const
         	{
         		c_iterator it(&data[0]);
@@ -612,14 +603,16 @@ namespace sc{
         		return it;
         	}
 
+			//!Returns a const iterator pointing to the i.e positon just after the last item in the list
         	c_iterator cend() const
         	{
         		c_iterator it(&data[0]);
 
         		return it;
         	}
-
-        	iterator insert( iterator pos, const T & value)//insere o elemento antes do local pedido e retorna o local
+			
+			//!Insert the value before the pos required and return the position
+        	iterator insert( iterator pos, const T & value)
         	{
 
         		if ( SIZE == CAPACITY )
@@ -640,6 +633,7 @@ namespace sc{
 
         	}
 
+			//!Erase the element at pos required.
         	iterator erase( iterator pos )
 			{
 				size_type aux = pos - data;

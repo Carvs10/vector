@@ -14,7 +14,9 @@ typedef std\+::ptrdiff\+\_\+t \hyperlink{classsc_1_1vector_1_1iterator_a7089358e
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classsc_1_1vector_1_1iterator_adcef8cb0104f9035bc98eacb4e2e29e7}{iterator} (T $\ast$pt=nullptr)
+\hyperlink{classsc_1_1vector_1_1iterator_ad9cff55254aef8c14bd6803dfa8b2e03}{iterator} (T $\ast$pt)
+\item 
+\hyperlink{classsc_1_1vector_1_1iterator_ac8fb8f5e6b6a8eab9ab808e90f96c01d}{$\sim$iterator} ()
 \item 
 \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \& \hyperlink{classsc_1_1vector_1_1iterator_a744168c87e46c6e962c30eb3ee3299ab}{operator=} (const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&rhs)
 \item 
@@ -31,9 +33,9 @@ const T \& \hyperlink{classsc_1_1vector_1_1iterator_acc1afb3186e955cd261c757dae2
 \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \hyperlink{classsc_1_1vector_1_1iterator_ab4a76691eb8ba0da9e014fa49f4cce4f}{operator-\/-\/} (int)
 \begin{DoxyCompactList}\small\item\em pós decremento \end{DoxyCompactList}\item 
 bool \hyperlink{classsc_1_1vector_1_1iterator_ab635a96af6c0bcc3fe888e2568287df1}{operator==} (const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&it) const
-\begin{DoxyCompactList}\small\item\em Comparação ==. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Comparsion ==. \end{DoxyCompactList}\item 
 bool \hyperlink{classsc_1_1vector_1_1iterator_ae0f420848b61b2f1bd5c7dc414082d29}{operator!=} (const \hyperlink{classsc_1_1vector_1_1iterator}{iterator} \&it) const
-\begin{DoxyCompactList}\small\item\em Comparação !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Comparsion !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -81,12 +83,19 @@ typedef std\+::size\+\_\+t \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_adcef8cb0104f9035bc98eacb4e2e29e7}\label{classsc_1_1vector_1_1iterator_adcef8cb0104f9035bc98eacb4e2e29e7}} 
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_ad9cff55254aef8c14bd6803dfa8b2e03}\label{classsc_1_1vector_1_1iterator_ad9cff55254aef8c14bd6803dfa8b2e03}} 
 \index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!iterator@{iterator}}
 \index{iterator@{iterator}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
 \subsubsection{\texorpdfstring{iterator()}{iterator()}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::iterator (\begin{DoxyParamCaption}\item[{T $\ast$}]{pt = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::iterator (\begin{DoxyParamCaption}\item[{T $\ast$}]{pt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_ac8fb8f5e6b6a8eab9ab808e90f96c01d}\label{classsc_1_1vector_1_1iterator_ac8fb8f5e6b6a8eab9ab808e90f96c01d}} 
+\index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!````~iterator@{$\sim$iterator}}
+\index{````~iterator@{$\sim$iterator}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
+\subsubsection{\texorpdfstring{$\sim$iterator()}{~iterator()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::$\sim$iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -100,7 +109,7 @@ bool \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operato
 
 
 
-Comparação !=. 
+Comparsion !=. 
 
 \mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a195ce221fcaf875739014d681073eaeb}\label{classsc_1_1vector_1_1iterator_a195ce221fcaf875739014d681073eaeb}} 
 \index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator$\ast$@{operator$\ast$}}
@@ -127,7 +136,7 @@ const T\& \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::op
 
 ++it pré incremento 
 
-Primeiro modo; \mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}\label{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}} 
+\mbox{\Hypertarget{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}\label{classsc_1_1vector_1_1iterator_a7e58b618eb71b340b74311eda1271bc9}} 
 \index{sc\+::vector\+::iterator@{sc\+::vector\+::iterator}!operator++@{operator++}}
 \index{operator++@{operator++}!sc\+::vector\+::iterator@{sc\+::vector\+::iterator}}
 \subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
@@ -176,7 +185,7 @@ bool \hyperlink{classsc_1_1vector}{sc\+::vector}$<$ T $>$\+::iterator\+::operato
 
 
 
-Comparação ==. 
+Comparsion ==. 
 
 
 

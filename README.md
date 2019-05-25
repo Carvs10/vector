@@ -9,7 +9,9 @@ Class Vector programmed in languange in C++ with iterator
 
 **[3. Compiling](#3-compiling)**
 
-**[4. Authorship](#4-authorship)**
+**[4. Documentation](#4-documentation)**
+
+**[5. Authorship](#5-authorship)**
 
 ## 1. Intorduction
 
@@ -34,7 +36,21 @@ To compile this project, you need to:
 
 `./bin/exe`
 
-## 4. Authorship
+## 4. Documentation
+
+To access Doxygen documentation, you must go to:
+
+`folder vector`
+
+`vecto/docs/html`
+
+search for archive:
+
+`index.html`
+
+and there you have it!
+
+## 5. Authorship
 
 This C++ class was developed by João Victtor Carvalho and Pedro Henrique Alves Cardoso.
 

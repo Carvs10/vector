@@ -67,7 +67,6 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classsc_1_1vector-members.html">List of all members</a>  </div>
@@ -81,6 +80,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector_1_1c__iterator.html">c_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class Const_iterator.  <a href="classsc_1_1vector_1_1c__iterator.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -147,22 +149,37 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab6fc47c9994c531ff8d0a0b46fe422f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeb01dacb26f39fb08cffc6f274284fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#aaeb01dacb26f39fb08cffc6f274284fd">shrink_to_fit</a> ()</td></tr>
 <tr class="separator:aaeb01dacb26f39fb08cffc6f274284fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
 <tr class="memitem:afd98588509a1f15ce5621735f69b01bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#afd98588509a1f15ce5621735f69b01bf">reserve</a> (size_t new_cap)</td></tr>
 <tr class="memdesc:afd98588509a1f15ce5621735f69b01bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private Data from Vector.  <a href="#afd98588509a1f15ce5621735f69b01bf">More...</a><br /></td></tr>
 <tr class="separator:afd98588509a1f15ce5621735f69b01bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefba74791ea0f1ab9b9ad95d35bf9497"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#aefba74791ea0f1ab9b9ad95d35bf9497">begin</a> ()</td></tr>
+<tr class="memdesc:aefba74791ea0f1ab9b9ad95d35bf9497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterator Methods.  <a href="#aefba74791ea0f1ab9b9ad95d35bf9497">More...</a><br /></td></tr>
+<tr class="separator:aefba74791ea0f1ab9b9ad95d35bf9497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92378196850ffdcc094f266d40cc2cc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#a92378196850ffdcc094f266d40cc2cc5">end</a> ()</td></tr>
+<tr class="memdesc:a92378196850ffdcc094f266d40cc2cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator pointing to the i.e the position after the last item in the list.  <a href="#a92378196850ffdcc094f266d40cc2cc5">More...</a><br /></td></tr>
+<tr class="separator:a92378196850ffdcc094f266d40cc2cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ef5584dc8f0d021f3689b1b617607d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsc_1_1vector_1_1c__iterator.html">c_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#aa9ef5584dc8f0d021f3689b1b617607d">cbegin</a> () const</td></tr>
+<tr class="memdesc:aa9ef5584dc8f0d021f3689b1b617607d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator pointing to the first item in the list.  <a href="#aa9ef5584dc8f0d021f3689b1b617607d">More...</a><br /></td></tr>
+<tr class="separator:aa9ef5584dc8f0d021f3689b1b617607d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab4f567a393988471cc01a206524dee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsc_1_1vector_1_1c__iterator.html">c_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#a1ab4f567a393988471cc01a206524dee">cend</a> () const</td></tr>
+<tr class="memdesc:a1ab4f567a393988471cc01a206524dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator pointing to the i.e positon just after the last item in the list.  <a href="#a1ab4f567a393988471cc01a206524dee">More...</a><br /></td></tr>
+<tr class="separator:a1ab4f567a393988471cc01a206524dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55608c5cee9a8311cbe7c4fde998a9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#ac55608c5cee9a8311cbe7c4fde998a9f">insert</a> (<a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a> pos, const T &amp;value)</td></tr>
+<tr class="memdesc:ac55608c5cee9a8311cbe7c4fde998a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the value before the pos required and return the position.  <a href="#ac55608c5cee9a8311cbe7c4fde998a9f">More...</a><br /></td></tr>
+<tr class="separator:ac55608c5cee9a8311cbe7c4fde998a9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dcc8ea80726caae68ac935ca677abfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#a9dcc8ea80726caae68ac935ca677abfe">erase</a> (<a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a> pos)</td></tr>
+<tr class="memdesc:a9dcc8ea80726caae68ac935ca677abfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the element at pos required.  <a href="#a9dcc8ea80726caae68ac935ca677abfe">More...</a><br /></td></tr>
+<tr class="separator:a9dcc8ea80726caae68ac935ca677abfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab0607397430a55a5a484dfea79867467"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#ab0607397430a55a5a484dfea79867467">data</a></td></tr>
 <tr class="separator:ab0607397430a55a5a484dfea79867467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6729b20ad502c5fdf480fec848476f6"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#ad6729b20ad502c5fdf480fec848476f6">SIZE</a></td></tr>
-<tr class="memdesc:ad6729b20ad502c5fdf480fec848476f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">número de elemnetos no vector  <a href="#ad6729b20ad502c5fdf480fec848476f6">More...</a><br /></td></tr>
+<tr class="memdesc:ad6729b20ad502c5fdf480fec848476f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of elements in vector.  <a href="#ad6729b20ad502c5fdf480fec848476f6">More...</a><br /></td></tr>
 <tr class="separator:ad6729b20ad502c5fdf480fec848476f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4c67859be8cfdd445d2700d55125184"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsc_1_1vector.html#ae4c67859be8cfdd445d2700d55125184">CAPACITY</a></td></tr>
-<tr class="memdesc:ae4c67859be8cfdd445d2700d55125184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capacidade máxima (atual) do vector.  <a href="#ae4c67859be8cfdd445d2700d55125184">More...</a><br /></td></tr>
+<tr class="memdesc:ae4c67859be8cfdd445d2700d55125184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum capacity in vector.  <a href="#ae4c67859be8cfdd445d2700d55125184">More...</a><br /></td></tr>
 <tr class="separator:ae4c67859be8cfdd445d2700d55125184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -542,6 +559,36 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="aefba74791ea0f1ab9b9ad95d35bf9497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefba74791ea0f1ab9b9ad95d35bf9497">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a> <a class="el" href="classsc_1_1vector.html">sc::vector</a>&lt; T &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterator Methods. </p>
+<p>Returns an iterator pointing to the first item in the list. </p>
+
+</div>
+</div>
 <a id="a318c4ab34bd9605214e99db94c4258a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a318c4ab34bd9605214e99db94c4258a9">&#9670;&nbsp;</a></span>capacity()</h2>
 
@@ -567,6 +614,64 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Return the internal storage capacity of the array </p>
+
+</div>
+</div>
+<a id="aa9ef5584dc8f0d021f3689b1b617607d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ef5584dc8f0d021f3689b1b617607d">&#9670;&nbsp;</a></span>cbegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsc_1_1vector_1_1c__iterator.html">c_iterator</a> <a class="el" href="classsc_1_1vector.html">sc::vector</a>&lt; T &gt;::cbegin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const iterator pointing to the first item in the list. </p>
+
+</div>
+</div>
+<a id="a1ab4f567a393988471cc01a206524dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab4f567a393988471cc01a206524dee">&#9670;&nbsp;</a></span>cend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsc_1_1vector_1_1c__iterator.html">c_iterator</a> <a class="el" href="classsc_1_1vector.html">sc::vector</a>&lt; T &gt;::cend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const iterator pointing to the i.e positon just after the last item in the list. </p>
 
 </div>
 </div>
@@ -628,6 +733,65 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a92378196850ffdcc094f266d40cc2cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92378196850ffdcc094f266d40cc2cc5">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a> <a class="el" href="classsc_1_1vector.html">sc::vector</a>&lt; T &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an iterator pointing to the i.e the position after the last item in the list. </p>
+
+</div>
+</div>
+<a id="a9dcc8ea80726caae68ac935ca677abfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcc8ea80726caae68ac935ca677abfe">&#9670;&nbsp;</a></span>erase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a> <a class="el" href="classsc_1_1vector.html">sc::vector</a>&lt; T &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a>&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erase the element at pos required. </p>
+
+</div>
+</div>
 <a id="a85da6164a082030bd04de354d657da0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85da6164a082030bd04de354d657da0d">&#9670;&nbsp;</a></span>front()</h2>
 
@@ -653,6 +817,46 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 <p>Returns the object at the front of the list </p>
+
+</div>
+</div>
+<a id="ac55608c5cee9a8311cbe7c4fde998a9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55608c5cee9a8311cbe7c4fde998a9f">&#9670;&nbsp;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a> <a class="el" href="classsc_1_1vector.html">sc::vector</a>&lt; T &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsc_1_1vector_1_1iterator.html">iterator</a>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Insert the value before the pos required and return the position. </p>
 
 </div>
 </div>
@@ -878,7 +1082,7 @@ template&lt;typename T &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1048,7 +1252,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Capacidade máxima (atual) do vector. </p>
+<p>Maximum capacity in vector. </p>
 
 </div>
 </div>
@@ -1098,7 +1302,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>número de elemnetos no vector </p>
+<p>Number of elements in vector. </p>
 
 </div>
 </div>
