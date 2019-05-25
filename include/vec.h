@@ -45,15 +45,22 @@ namespace sc{
 					typedef std::size_t size_type;
 					typedef T* pointer;
 					typedef std::ptrdiff_t difference_type;
-					//typedef std::bidirectinonal_iterator_tag iterator_category;
+					
 
 				//! Private data	
 				private:
 					T *ptr; /**<Pointer to data. */
 
 				public:
-					iterator( T* pt = nullptr ) : ptr (pt)
-					{/* empty */}
+
+					//==> contructor
+					iterator(T* pt)
+						:ptr{pt}
+					{/*empty*/}
+
+					//=== Destructor
+					~iterator()
+					{/*empty*/}
 
 					iterator& operator=( const iterator& rhs )
 					{
@@ -130,8 +137,109 @@ namespace sc{
 				
 
 		};
-			//class const_iterator{
-			//};
+
+		class c_iterator
+			{
+				public:
+
+					typedef T& reference;
+					typedef std::size_t size_type;
+					typedef T* pointer;
+					typedef std::ptrdiff_t difference_type;
+					//typedef std::bidirectinonal_iterator_tag iterator_category;
+
+				//! Private data	
+				private:
+					T *ptr; /**<Pointer to data. */
+
+				public:
+
+					//==> contructor
+					c_iterator(T* pt)
+						:ptr{pt}
+					{/*empty*/}
+
+					//=== Destructor
+					~c_iterator()
+					{/*empty*/}
+
+					const iterator& operator=( const iterator& rhs )
+					{
+
+						ptr = rhs.ptr;
+
+						return *this;
+					}
+
+
+					const T& operator*(void)
+					{
+
+						return *ptr;
+					}
+
+					const T& operator*(void) const
+					{
+
+						return *ptr;
+					}
+
+
+					/// ++it pré incremento
+					const iterator operator++(void)
+					{
+						///Primeiro modo;
+						//++ptr;
+						//return *this;
+
+
+						//Retrona um novo iterador que aponta para o próximo endereço
+						//Segundo modo
+						return iterator( ++ptr );
+					}
+
+
+						///it++ pos incremento
+					const iterator operator++(int)
+					{
+						iterator temp( ptr );// Cria um iterator temporário
+						ptr++;
+						return temp;
+
+					}
+
+
+						/// pré decremento
+					const iterator operator--(void)
+					{
+						return iterator (--ptr);
+					}
+
+
+						/// pós decremento
+					const iterator operator--(int)
+					{
+						iterator temp( ptr );// Cria um iterator temporário
+						ptr--;
+						return temp;
+					}
+
+
+
+						/// Comparação ==
+					const bool operator==( const iterator &it) const
+					{ return this->ptr == it.ptr; } //devem retornar o mesmo endereço
+
+						/// Comparação !=
+					const bool operator!=( const iterator &it) const
+					{ return this->ptr != it.ptr;}
+
+					
+				
+
+		};
+
+
 
 			using size_type = unsigned long;
 			using value_type = T;
@@ -204,7 +312,7 @@ namespace sc{
 			 /*! Constructs the list with the contents of the range [first, last).
 			 */
 			template < typename InpultIt >
-			vector ( InpultIt first, InpultIt last)://pego o range e faço um casting do last - first para pegar o size
+			vector ( InpultIt first, InpultIt last):
 			SIZE{ (size_type)(last - first) },
 			CAPACITY{ (size_type)(last - first) }
 			{
@@ -212,13 +320,10 @@ namespace sc{
 
 				for(int i = 0; i < SIZE; i++){
 					data[i] = *first ;
-					//std::cout << first;
+					
 					first++;
 				}
-				//while(first < last){
-				//	data[]
-					//first++;
-				//}
+				
 				std::cout << "construiu 3\n";
 			}
 
@@ -226,7 +331,7 @@ namespace sc{
 			 /*! Copy constructor. 
 			 /*! Constructs the list with the deep copy of the contents of other.
 			 */
-			vector( const vector& other)://copia o conteudo de um vector para outro
+			vector( const vector& other):
 				SIZE{ other.SIZE },
 				CAPACITY{ other.CAPACITY }
 			{	
@@ -240,13 +345,11 @@ namespace sc{
 			 /*! Copy assignment operator.
 			 /*! Replaces the contents with a copy of the contents of other.
 			 */
-			vector& operator=( const vector& other)//===> PRECISO ENTENDER AINDA!!! AINDA NAO ESTA FUNCCIONANDO
+			vector& operator=( const vector& other)
 				//size{ other.size },
 				//capacity{ other.CAPACITY }
 			{
-				//Determinar o menor tamanho
-				//auto limit = std::min(other.size, size );
-				//copiar os dados de rhs para o 
+				
 				data = new T[ other.SIZE ];
 				std::cout << "construiu 6\n";
 				std::copy( data, other.SIZE, other.data);
@@ -257,7 +360,7 @@ namespace sc{
 			//!
 			 /*! Replaces the contents with those identified by initializer list ilist
 			 */
-			vector& operator=( std::initializer_list<T> ilist )//===> PRECISO ENTENDER AINDA!!! AINDA NAO ESTA FUNCCIONANDO
+			vector& operator=( std::initializer_list<T> ilist )
 			{
 				data = new T[ ilist.SIZE ];
 				std::cout << "construiu 6\n";
@@ -319,13 +422,10 @@ namespace sc{
 				// Verificar se tem espaço para receber o novo elemento.
             	if ( SIZE == CAPACITY )
             	{
-                	std::cout << "[push_back] : capacity = " << CAPACITY << ", estou dobrando...\n";
-                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );//FALTA ENTENDER ESSA LINHA DE CODIGO
+                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );
             	}
 
-            	// Inserir normalmente.
            		 data[SIZE++] = value;
-            	//*begin() = value;
 			}
 			//!
 			 /*! Adds value to the front of the list
@@ -335,11 +435,9 @@ namespace sc{
 				// Verificar se tem espaço para receber o novo elemento.
             	if ( SIZE == CAPACITY )
             	{
-                	std::cout << "[push_front] : capacity = " << CAPACITY << ", estou dobrando...\n";
-                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );//FALTA ENTENDER ESSA LINHA DE CODIGO
+                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );
             	}
             	SIZE++;
-            	//transferir um bloco de memoria para o lado
 
             	for(int i = SIZE; i > 0; i--){
 
@@ -377,7 +475,7 @@ namespace sc{
 			//!
 			 /*! Returns the object at the end of the list
 			 */
-			const T & back() const//retorna o objeto do final da lista
+			const T & back() const
 			{
 				return data[SIZE];
 			}
@@ -385,7 +483,7 @@ namespace sc{
 			//!
 			 /*! Returns the object at the front of the list
 			 */
-			const T & front() const//retorna o objeto do inicio da lista
+			const T & front() const
 			{
 				return data[0];
 			}
@@ -393,7 +491,7 @@ namespace sc{
 			//!
 			 /*! eplaces the content of the list with count copies of value.
 			 */
-			void assign ( size_type count, const T & value )//coloca o valor em todos os elementos do vetor antigo  de forma contada //testar
+			void assign ( size_type count, const T & value )
 			{
 				SIZE = count;
 
@@ -405,7 +503,7 @@ namespace sc{
 			//!
 			 /*! Returns the object at the index pos in the array,with no bounds-checking
 			 */
-			T & operator[] ( size_type pos )//libera a operação de incerção por barras
+			T & operator[] ( size_type pos )
 			{
 				return data[ pos ];
 			}
@@ -413,10 +511,10 @@ namespace sc{
 			//!
 			 /*! Returns the object at the index pos in the array,with bounds-checking
 			 */
-			T & at ( size_type pos )//retorna o objeto dentro do index dado caso o index seja valido// testar
+			T & at ( size_type pos )
 			{
 				if (SIZE < pos){
-					//std::out_of_range;
+					throw std::out_of_range("ERRO --> posição invalida!!!");
 				}
 				else{
 					return data[ pos ];
@@ -427,7 +525,7 @@ namespace sc{
 			 /*! Requests the removal of unused capacity.
 			 /*! It is a non-binding request to reduce capacity() to size().
 			 */
-			void shrink_to_fit()//iguala a capacidade ao tamanho!
+			void shrink_to_fit()			
 			{
 				CAPACITY = SIZE;
 			}
@@ -435,7 +533,7 @@ namespace sc{
 			//!
 			 /*! Return false if the arrays have different elements
 			 */
-			friend bool operator== ( const vector& lhs, const vector& rhs)//nao ta funcionando direito
+			friend bool operator== ( const vector& lhs, const vector& rhs)
 			{
 				if(lhs.size() == rhs.size()){
 
@@ -454,7 +552,7 @@ namespace sc{
 			//!
 			 /*! Return false if the arrays are equal.
 			 */
-			friend bool operator!= ( const vector& lhs, const vector& rhs)//não ta funcionando direito
+			friend bool operator!= ( const vector& lhs, const vector& rhs)
 			{
 				if(lhs.size() == rhs.size()){
 
@@ -469,7 +567,7 @@ namespace sc{
 					return true;
 				}
 			}
-		private:
+		
 
 			//!Private Data from Vector
 		
@@ -479,25 +577,83 @@ namespace sc{
 			 */
         	void reserve( size_t new_cap )
         	{
-            	// Se a capacidade nova < capacidade atual, não faço nada.
+            	
             	if ( new_cap <= CAPACITY ) return;
 
-            	// Passo 1: alocar nova memória com tamanho solicitado.
             	T * temp = new T[ new_cap ];
-
-            	// Passo 2: copiar os dados da memória antiga para a nova.
             	std::copy( &data[0], &data[SIZE],  temp );
-            	//std::copy( begin(), end(), temp );
 
-            	// Passo 3: Liberar a memória antiga.
             	delete[] data;
 
-            	// Passo 4: Redirecionar ponteiro para a nova (maior) memória.
             	data = temp;
-
-            	// Passo 5: Atualizações internas.
             	CAPACITY = new_cap;
-        }
+        	}
+
+
+        	//iterator
+        	iterator begin()
+        	{
+        		iterator it(&data[0]);
+
+        		return it;
+        	}
+
+        	iterator end()
+        	{
+        		iterator it(&data[SIZE]);
+        		
+        		return it;
+        	}
+
+        	c_iterator cbegin() const
+        	{
+        		c_iterator it(&data[0]);
+
+        		return it;
+        	}
+
+        	c_iterator cend() const
+        	{
+        		c_iterator it(&data[0]);
+
+        		return it;
+        	}
+
+        	iterator insert( iterator pos, const T & value)//insere o elemento antes do local pedido e retorna o local
+        	{
+
+        		if ( SIZE == CAPACITY )
+            	{
+                	
+                	reserve( ( CAPACITY == 0 ) ? 1 : (2 * CAPACITY) );
+            	}
+
+            	size_type aux = SIZE - pos;
+            	SIZE++;
+
+        		for(int i = SIZE; i > aux; i--){
+
+            		data[i] = data[i-1];
+            	}
+
+            	data[0] = value;
+
+        	}
+
+        	iterator erase( iterator pos )
+			{
+				size_type aux = pos - data;
+
+				for( size_type i{aux} ; i < SIZE ; i++ )
+				{
+					data[i-1] = data[i];
+				}
+
+				SIZE--;
+
+				return my_iterator( &data[aux-1] );
+			}
+
 	};
 }
 

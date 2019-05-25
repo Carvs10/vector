@@ -5,3 +5,4 @@ output: ./obj/main.o
 ./obj/main.o: ./source/main.cpp 
 	mkdir -p obj
 	g++ -c ./source/main.cpp -o ./obj/main.o -std=c++11
+

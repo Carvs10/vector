@@ -51,6 +51,14 @@ int main(){
 		std::cout << vec1[i]<<std::endl;
 	}
 
+    std::cout << "ITERATOR TESTING:\n\n";
+
+    sc::vector<int>::iterator it = vec1.begin();
+    std::cout << *it << " \n";
+
+    //for ( ; it != vec1.end(); ++it ){
+        //std::cout << *it << " ";
+
 	return 0;
 }
 
